@@ -11,6 +11,7 @@
           <th>ShortDescription</th>
           <th>is visible</th>
           <th></th>
+          <th>Category</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +21,11 @@
           <td>{{ post.isVisible }}</td>
           <td>
             <a class="btn btn-light" [routerLink]="[post.id]">EDIT</a>
+          </td>
+          <td>
+            <span *ngFor="let category of post.categories">
+              <span class="badge bg-secondary">{{ category.name }}</span>
+            </span>
           </td>
         </tr>
       </tbody>

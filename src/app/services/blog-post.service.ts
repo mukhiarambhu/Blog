@@ -15,8 +15,7 @@ export class BlogPostService {
     return this.http.get<BlogPost[]>(`${environment.baseUrl}/api/Blog`);
   }
 
-  postblog(model: BlogPost): Observable<AddBlogPost> {
-    console.log('Hello');
+  postblog(model: AddBlogPost): Observable<AddBlogPost> {
     return this.http.post<AddBlogPost>(
       `${environment.baseUrl}/api/Blog`,
       model
