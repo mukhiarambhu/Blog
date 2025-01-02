@@ -6,8 +6,14 @@ import { EditCategoryComponent } from './features/category/edit-category/edit-ca
 import { BlogPostListComponent } from './features/blog-post/blog-post-list/blog-post-list.component';
 import { EditBlogPostComponent } from './features/blog-post/edit-blog-post/edit-blog-post.component';
 import { AddBlogPostComponent } from './features/blog-post/add-blog-post/add-blog-post.component';
+import { HomeComponent } from './public/home/home.component';
+import { BlogDetailsComponent } from './public/blog-details/blog-details.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'admin/categories',
     component: CategoryListComponent,
@@ -31,6 +37,10 @@ const routes: Routes = [
   {
     path: 'admin/blogPosts/:id',
     component: EditBlogPostComponent,
+  },
+  {
+    path: 'blog/:url',
+    component: BlogDetailsComponent,
   },
 ];
 

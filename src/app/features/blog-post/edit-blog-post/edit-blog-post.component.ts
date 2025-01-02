@@ -56,10 +56,6 @@ export class EditBlogPostComponent implements OnInit {
       isVisible: this.model?.isVisible,
       categories: this.selectedCategory ?? [],
     };
-    console.log(this.selectedCategory);
-    console.log(requestObject.categories);
-    // console.log(requestObject);
-
     this.blogPostservice.updateBlog(this.id, requestObject).subscribe({
       next: (res) => {
         this.router.navigateByUrl('/admin/blogPosts');
@@ -67,7 +63,12 @@ export class EditBlogPostComponent implements OnInit {
       error: (err) => console.log(err),
     });
   }
-}
-function removeExistingCategory() {
-  throw new Error('Function not implemented.');
+  deleteBlog(id: any) {
+    this.blogPostservice.deleteBlog(this.id).subscribe({
+      next: (res) => {
+        this.router.navigateByUrl('/admin/blogPosts');
+      },
+      error: (err) => console.log(err),
+    });
+  }
 }

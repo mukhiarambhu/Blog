@@ -36,4 +36,14 @@ export class BlogPostService {
       data
     );
   }
+
+  deleteBlog(id?: string | null): Observable<BlogPost> {
+    return this.http.delete<BlogPost>(`${environment.baseUrl}/api/Blog/${id}`);
+  }
+
+  getByUrlhandle(urlhandle?: string | null): Observable<BlogPost> {
+    return this.http.get<BlogPost>(
+      `${environment.baseUrl}/api/Blog/${urlhandle}`
+    );
+  }
 }
