@@ -15,6 +15,7 @@ import { AddBlogPostComponent } from './features/blog-post/add-blog-post/add-blo
 import { MarkdownModule } from 'ngx-markdown';
 import { HomeComponent } from './public/home/home.component';
 import { BlogDetailsComponent } from './public/blog-details/blog-details.component';
+import { LoginComponent } from './features/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BlogDetailsComponent } from './public/blog-details/blog-details.compone
     AddBlogPostComponent,
     HomeComponent,
     BlogDetailsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

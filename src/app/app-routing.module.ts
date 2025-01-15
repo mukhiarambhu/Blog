@@ -8,6 +8,7 @@ import { EditBlogPostComponent } from './features/blog-post/edit-blog-post/edit-
 import { AddBlogPostComponent } from './features/blog-post/add-blog-post/add-blog-post.component';
 import { HomeComponent } from './public/home/home.component';
 import { BlogDetailsComponent } from './public/blog-details/blog-details.component';
+import { LoginComponent } from './features/auth/login/login.component';
 
 const routes: Routes = [
   {
@@ -42,10 +43,14 @@ const routes: Routes = [
     path: 'blog/:url',
     component: BlogDetailsComponent,
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
